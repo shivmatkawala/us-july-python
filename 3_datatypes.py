@@ -358,6 +358,131 @@ s2 = {4, 5, 6, 7}
 # print(s2 - s1)
 
 
-    # 9) Range
+    # 9) Range:
+        # Range is an immutable sequence of integers generated on fly.
+        # These numbers will never be stored in memory
+        # In operations where having collection of sequence of numbers in not necessary but 
+        # having them for operations is necessary.
 
-    # 10) Dict
+#r1 = range(5)   # start=> 0, stop=> 5, step=> 1
+# print(r1)
+# # Typecasting:
+# l1 = list(r1)
+# print(l1)
+#-----------------------
+# r2 = range(5,15)   # start=> 5, stop=> 15, step=> 1
+# print(r2)
+
+# t2 = tuple(r2)
+# print(t2)
+
+#--------------------------------
+# r3 = range(21, 40, 3)  # start=> 21, stop=> 40, step=> 3
+# print(r3)
+# s3 = set(r3)
+# print(s3)
+# print(len(s3))
+
+# r4 = range(4, 10, 2)
+# print(r4[2])
+#----------------------------------------------------
+
+
+    # 10) Dict:
+        # It is a collection of key-value pairs.
+        # It is ordered datatype but indexed using keys
+        # Dictionary initialized using {}
+
+# students = {1:"Jay", 2:"Laxmi", 3:"Imran"}
+# print(students, type(students))
+
+# print(students[2])
+# print(students[3])
+
+Grocery = {
+    "Dairy": ["Milk", "Curd", "Paneer"],
+    "Fruits": ["Apple", "Mango", "Guava"],
+    "Veggies": ["Potato", 'Onion', "Broccoli"],
+    "Snacks": ["Chips", "Pumpkins", "popcorn"]
+}
+# print(Grocery, type(Grocery))
+# print(Grocery["Snacks"])
+# print(Grocery["Veggies"])
+# print(Grocery["Veggies"][0])
+
+# dict3 = {
+#     1: 1,
+#     "Sam": {"Age": 23, "Qualificatio": "B.Sc", "Salary": 4500},
+#     5: [1, 2, 3, 4],
+#     6: (100, 200, 300),
+#     7: "Sam Andrew",
+#     "Gender": "Male",
+#     "isAmerican": True
+# }
+
+# print(dict3, type(dict3))
+
+# print(dict3["isAmerican"])
+# print(dict3[5])
+
+#------------------------------------
+
+# Dictionary OPerations: 
+
+dict4 = {1:1, 2:4, 3:9, 4:16, 5:25}
+
+# Add new element
+# dict4[6] = 36
+# print(dict4)
+
+# update value of a key
+# dict4[3] = 27
+# print(dict4)
+
+# In BUilt functions of Dictionary:
+# print(dict4.get(5))
+# dict4.update({3:27})
+# print(dict4)
+
+#--------------------------------
+
+# Get all the keys:
+# print(dict4.keys())   #dict_keys([1, 2, 3, 4, 5])
+
+# Get all the values:
+# print(dict4.values())  #dict_values([1, 4, 9, 16, 25])
+
+# Get list of tuples of key-value pairs
+# print(dict4.items())   #dict_items([(1, 1), (2, 4), (3, 9), (4, 16), (5, 25)])
+
+# Remove particular key value
+# dict4.pop(3)  # .pop() deletes key value pair by taking key as parameter
+# print(dict4)
+
+# dict4.popitem()  # removes last key-value pair
+# print(dict4)
+
+# dict4.clear()      # makes dictionary empty
+# print(dict4)
+
+#-----------------------------------------------------
+
+# names = ["Jay", "Amit", "Laxmi", "Ajain", "Imran", "Dev", "Sarmishtha"]
+# ages = [45, 78, 23, 10, 90, 50]
+
+# studs = dict(zip(names, ages))
+# print(studs)
+
+#-----------------------------------
+
+# students = ["A", "B", "C", "D", "E", "F"]
+
+# buds = dict.fromkeys(students, "Fail")
+# print(buds)
+
+#---------------------------------------------------
+# b1 = dict([(1, 2), (2, 3), (3, 4)])
+# print(b1)
+
+#--------------------------------------------------------
+
