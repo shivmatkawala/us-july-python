@@ -31,40 +31,167 @@
 
 # Functions Types:
     # No Argument Function
+# def get_1_to_10_numbers():
+#     for i in range(1, 11):
+#         print(i)
+
+# get_1_to_10_numbers()
+
+# get_1_to_10_numbers()
+
+# get_1_to_10_numbers()
+
+#-----------------------------
+# def square_of_5():
+#     print(5 ** 2)
+
+# square_of_5()
+# square_of_5()
+#-----------------------------
+
     # Positional Argument Function
+
+# def my_info(name, age, gender, salary):
+#     print(f'''
+#         My Name is {name}
+#         My Age is {age}
+#         My Gender is {gender}
+#         My Slary is {salary}
+#     ''')
+
+# my_info("Siva Kumaran", 34, "Male", 30000)
+
     # Default Argument Function
+def greet(name="Buddy"):
+    print(f"Hello {name}")
+
+# greet()
+# greet("The Great Imran Khan")
+# greet()
+
+# greet(100)
+
     # Keyword Argument Function
+# def signup(firstname, lastname, dob, city, country):
+#     import time
+#     print(f"""
+#         Firstname: {firstname}
+#         Lastanme:  {lastname}
+#         DOB:       {dob}
+#         City:      {city}
+#         Contry:    {country}
+#     """)
+#     time.sleep(3)
+#     print("Singnup Successful..!")
+
+
+# signup(city="Los Angeles", lastname="Rivers", firstname="Richard", dob="5/7/2001", country="USA")
+
+
     # Variable length argument function
-    # Variable length keyword function
+# def addition(*args):
+#     print(f"Sum: {sum(args)}")
+
+# addition(3, 4, 5, 6, 7, 8, 9)
+# addition(8, 2)
+
+# addition(3, 4, 5)
+# addition(6, 6)
+# addition(7, 8, 9, 5)
+
+
+    # Variable length keyword argument function
+
+# def total_marks(**kwargs):
+    # marks = list(kwargs.values())
+    # total = sum(marks)
+    # print(total)
+
+# total_marks(mack=45, sara=67, david=34, vimal=90)
+# d1 = {"Raj":55, "kiran":90, "sama":66, "fama":33}
+# total_marks(**d1)
+# 
+
 
 #*********************PRACTICE********************************
-# 🔥 Intermediate Lambda Practice Questions
-# Square and filter evens  
-# Given a list of integers, square each number and keep only the even results.
+# Write a function to print cube's of all numbers
+# in between 1 to 11  (No argument Function)
 
-# Sum of digits  
-# Write a program that takes a list of numbers and returns the sum of digits of each number using map and reduce.
+# def cubes():
+#     for i in range(1, 11):
+#         print(i**3)
 
-# Longest word length  
-# Given a list of words, find the length of the longest word using reduce.
+# cubes()
 
-# Filter prime numbers  
-# From a list of integers, filter out only prime numbers using filter and a lambda.
+# def cubes():
+#     count = 1
+#     while count < 11:
+#         print(count **3)
+#         count+=1
 
-# Multiply all elements  
-# Use reduce to compute the product of all elements in a list.
+# cubes()
 
-# Remove palindromes  
-# Given a list of strings, filter out palindromes using filter and a lambda.
+# def cubes():
+#     c = [num**3 for num in range(1, 11)]
+#     print(c)
 
-# Find common elements  
-# Use filter and lambda to find elements that exist in both lists.
+# cubes()
 
-# Sort by last character  
-# Sort a list of strings based on their last character using sorted with a lambda.
+# def cubes():
+#     c = list(map(lambda num: num**3, [i for i in range(1, 11)]))
+#     print(c)
 
-# Count vowels  
-# Use reduce to count the total number of vowels in a given string.
+# cubes()
 
-# Group even and odd  
-# Transform a list of integers into a list of tuples (number, "even"/"odd") using map and a lambda.
+#--------------------------------------------------
+
+
+# Write a function which takes an argument
+# a list of marks.
+# and print total count of marks less than 40.
+
+# marks = [23, 67, 90, 40, 33, 12, 67, 100, 34]
+
+# def failed(m:list):
+#     count = 0
+#     for i in m:
+#         if i < 40:
+#             count+=1
+#     print(f"Total {count} marks are less than 40")
+
+
+# failed(marks)
+
+# def failed(m:list):
+#     total = 0
+#     index = 0
+#     while count < len(m):
+#         if m[index] < 40:
+#             total+=1
+#         count+=1
+#     print(f"Total {total} marks are less than 40")
+
+# failed(marks)
+
+#--------------------------------------------
+
+# def failed(m:list):
+#     f = len(list(filter(lambda num: num if num < 40 else None, m)))
+#     print(f)
+
+# failed(marks)
+
+#-------------------------------------
+
+# def failed(m):
+#     f = [(mark if mark < 40 else None) for mark in m]
+#     print(len(f) - f.count(None))
+    
+# failed(marks)
+
+#------------------------------------------------------
+
+# Write a function which ll display list of 
+# all students who failed in exam.
+
+stud_marks = {"Sharmishta": 45, "Laxmi": 60, "Ajain": 30, "Dev": 20, "Imran": 12, "Amit": 90, "Viquar": 100}
